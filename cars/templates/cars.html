@@ -4,8 +4,9 @@
     </head>
     {% block content %}
         <body>
-            <h1>Cars</h1>
-            <h3>Car List</h3>
+            {% for car in cars %}
+                <h3>Carro - {{car.model}}</h3>
+            {% endfor %}
         </body>
     {% endblock %}
 </html>
