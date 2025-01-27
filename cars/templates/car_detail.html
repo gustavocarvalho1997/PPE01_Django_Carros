@@ -94,10 +94,10 @@
       <p><strong>Bio:</strong> {{ object.bio }}</p>
     {% endif %}
   </div>
-  {% comment %} {% if user.is_authenticated %}
+  {% if user.is_authenticated %}
     <div class="buttons-container">
       <a href="{% url 'car_update' pk=object.pk %}" class="btn btn-primary">Editar</a>
       <a href="{% url 'car_delete' pk=object.pk %}" class="btn btn-danger">Deletar</a>
     </div>
-  {% endif %} {% endcomment %}
+  {% endif %}
 {% endblock %}
