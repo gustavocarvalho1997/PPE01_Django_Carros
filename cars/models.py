@@ -24,3 +24,15 @@ class Car(models.Model):
     # Método para retornar o nome do modelo
     def __str__(self):
         return self.model
+    
+class CarInventory(models.Model):
+    # Atributos
+    cars_count = models.IntegerField()
+    cars_value = models.DecimalField(max_digits=10, decimal_places=2)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f'{self.cars_count} - {self.cars_value}'
