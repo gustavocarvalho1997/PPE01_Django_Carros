@@ -14,5 +14,3 @@ def get_car_ai_bio(model, brand, year):
     prompt = prompt.format(model, brand, year)
     response = model.generate_content(prompt)
     return response.text
-
-print(get_car_ai_bio('Fusca', 'Volkswagen', 1970))
