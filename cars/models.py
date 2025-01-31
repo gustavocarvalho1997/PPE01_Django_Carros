@@ -19,7 +19,7 @@ class Car(models.Model):
     model_year = models.IntegerField(blank=True, null=True)
     plate = models.CharField(max_length=10, blank=True, null=True)
     value = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
-    photo = models.ImageField(upload_to='cars/', blank=True, null=True)
+    photo = models.ImageField(upload_to='cars/', blank=False, null=False, default='cars/default.jpg')
     bio = models.TextField(blank=True, null=True)
 
     # Método para retornar o nome do modelo
