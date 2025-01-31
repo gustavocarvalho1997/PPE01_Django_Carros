@@ -22,6 +22,7 @@ from cars.views import CarDetailView, CarsListView, NewCarCreateView, CarUpdateV
 from accounts.views import register_view, login_view, logout_view
 
 urlpatterns = [
+    path('', CarsListView.as_view(), name='home'),
     path('admin/', admin.site.urls),
     path('register/', register_view, name='register'),
     path('login/', login_view, name='login'),
